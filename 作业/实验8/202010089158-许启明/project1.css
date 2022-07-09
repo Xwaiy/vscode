@@ -1,0 +1,58 @@
+* {
+    font-size: 13px;
+}
+
+#content {
+    background: #eaeaea url(./img/images61-4.png) no-repeat 0px 0px;
+    width: 720px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#head {
+    width: 710px;
+    height: 60px;
+}
+
+h3 {
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    font-family: 微软雅黑;
+}
+
+#row1 {
+    background: #e1e1e1;
+}
+
+#row2 {
+    background: #e3e3e3;
+}
+
+#td1 {
+    background: #f0f0f0;
+}
+
+#td2 {
+    background: #fbfbfb;
+}
+
+#red {
+    color: red;
+}
+#red strong{
+    color: black;
+}
+th {
+    color: #666666;
+}
+
+a {
+    background: url(./img/images61-3.png) repeat-x;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    padding: 5px auto;
+    float: right;
+    display: inline;
+}

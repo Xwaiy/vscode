@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- head 中 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+</head>
+<body>
+    <div style="width: 100%;text-align: left;margin-top: 20px;padding-left: 10px">
+        <img style="width: 118px !important;height: 55px !important; max-height: 110px !important;"
+             src="/static/upload/logo.png">
+    </div>
+    <div style="margin-left: 20px;color: #1891cd">工作室意向调查表</div>
+    
+    
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
+            <div class="weui-cell__bd">
+                <input id="userId" class="weui-input" type="text" placeholder="请输入手机号">
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">加入组别</label></div>
+            <div class="weui-cell__bd">
+                <input id="groups" class="weui-input" type="text" placeholder="点击选择">
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">发展方向</label></div>
+            <div class="weui-cell__bd">
+                <input id="directions" class="weui-input" type="text" placeholder="点击选择(多选)">
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-cells__title">过往经历与学习愿景</div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea id="description" style="height: 300px;overflow-y: scroll" class="weui-textarea"
+                          placeholder="请输入文本"
+                          rows="3"></textarea>
+                <div class="weui-textarea-counter">请详细输入你希望在工作室的实践愿景</div>
+                <div class="weui-textarea-counter"><span class="count"></span> /500</div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="z-index: 100; position: fixed;bottom: 0;width: 100%;border-radius: 0;"
+         class="submit weui-btn weui-btn_primary">提交
+    </div>
+    
+    
+    </div>
+</body>
+<!-- body 最后 -->
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+
+<script>
+
+    //使用jquery ajax函数 调用接口获取后台数据
+    $.ajax({
+        url: '/getDate',
+        type: 'get',
+        timeout: 50000,
+        success: function (data) {
+            var jobs =data.jobs;
+            var directions =data.directions;
+
+
+            $("#groups").select(jobs);
+            $("#directions").select(directions);
+        },
+        error: function (res, error) {
+            alert(error)
+        }
+    });
+
+    $('.submit').click(function () {
+
+        var userId = $('#userId').val(); //用户的id
+        var postData = {
+            id: userId, //从url参数获得的用户id，用于将数据写到正确的用户表
+            groups: $('#groups').val(),
+            directions: $('#directions').val(),
+            description: $('#description').val(),
+        }
+        console.log(postData);
+
+        if (!postData.groups || !postData.directions || !postData.description || !postData.id) {
+            alert("请填写完整的信息！")
+            return; //如果信息没有填写好，弹窗提示，且不执行下面的操作；
+        }
+
+        $.ajax({
+            url: '/postData',
+            type: 'post',
+            timeout: 500000,
+            data: postData,
+            processData: true,
+            success: function (data) {
+                alert(data.msg)
+                
+            },
+            error: function (res, error) {
+            }
+        })
+
+    })
+</script>
+</html>

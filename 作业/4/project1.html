@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易灯箱画廊</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+            margin: 0 auto;
+            background-color: rgb(75, 184, 147);
+        }
+        p{
+            color: white;
+            font-size: 25px;
+        }
+
+        ul{
+            list-style-type: none;
+            width: 800px;
+            height: 120px;
+            margin:  0 auto;
+        }
+        li{
+            float: left;
+            width: 110px;
+            height: 90px;
+            margin: 5px;
+        }
+        img{
+            width: 100px;
+            height: 80px;
+            border: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            border-bottom: 4px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <embed src="trees/Sleep Away.mp3" loop="true" autostart="true" width="0" height="0" type=""></embed>
+    <div>
+        <p>简易灯箱画廊设计</p>
+        <hr size="2" color="red">
+        <ul>
+            <li><a href="trees/t1.jpg" target="iframe">T1<img src="trees/t1.jpg" alt=""></a></li>
+            <li><a href="trees/t2.jpg" target="iframe">T2<img src="trees/t2.jpg" alt=""></a></li>
+            <li><a href="trees/t3.jpg" target="iframe">T3<img src="trees/t3.jpg" alt=""></a></li>
+            <li><a href="trees/t4.jpg" target="iframe">T4<img src="trees/t4.jpg" alt=""></a></li>
+            <li><a href="trees/t5.jpg" target="iframe">T5<img src="trees/t5.jpg" alt=""></a></li>
+            <li><a href="trees/t6.jpg" target="iframe">T6<img src="trees/t6.jpg" alt=""></a></li>
+        </ul>
+        <iframe src="trees/t1.jpg" name="iframe" width="500px" height="300px" frameborder="0"></iframe>
+    </div>
+    
+</body>
+</html>

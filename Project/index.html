@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ZH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网易云音乐</title>
+  <!-- 引入CSS -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- 阿里字体图标 -->
+  <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_2941278_29m3dgwyb5l.css"> -->
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="header">
+    <nav>
+      <!-- 网站LOGO -->
+      <h1 class="logo icon-one">
+        <a href="/#">网易云音乐</a>
+      </h1>
+      <!-- 导航菜单 -->
+      <ul>
+        <li class="current">
+          <a href="/#发现音乐">发现音乐</a>
+        </li>
+        <li>
+          <a href="/#我的音乐">我的音乐</a>
+        </li>
+        <li>
+          <a href="/#朋友">朋友</a>
+        </li>
+        <li>
+          <a href="/#商城">商城</a>
+        </li>
+        <li>
+          <a href="/#音乐人">音乐人</a>
+        </li>
+        <li>
+          <a href="/#下载客户端">下载客户端</a>
+        </li>
+      </ul>
+      <!-- 搜索框 -->
+      <div class="search">
+        <input type="text" class="icon-one" placeholder="音乐/视频/电台/用户">
+      </div>
+      <!-- 创作者中心链接 -->
+      <div class="link">
+        <a href="/#创作者中心">创作者中心</a>
+      </div>
+      <!-- 登录按钮 -->
+      <div class="login">
+        <a href="/#登录">登录</a>
+      </div>
+    </nav>
+    <!-- 分类菜单 -->
+    <div class="classification">
+      <ul>
+        <li class="current">
+          <a href="/#推荐">推荐</a>
+        </li>
+        <li>
+          <a href="/#排行榜">排行榜</a>
+        </li>
+        <li>
+          <a href="/#歌单">歌单</a>
+        </li>
+        <li>
+          <a href="/#主播电台">主播电台</a>
+        </li>
+        <li>
+          <a href="/#歌手">歌手</a>
+        </li>
+        <li>
+          <a href="/#新碟上架">新碟上架</a>
+        </li>
+      </ul>
+    </div>
+    <!-- 轮播图 -->
+    <div class="banner">
+      <img src="" id="carousel">
+      <!-- 下载客户端 -->
+      <div class="download">
+        <a href="javascript:void(0)">下载客户端</a>
+        <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+      </div>
+      <!-- 翻页按钮 -->
+      <a href="javascript:void(0)" id="last" hidefocus="true">
+        <i class="iconfont icon-arrow-left-bold"></i>
+      </a>
+      <a href="javascript:void(0)" id="next" hidefocus="true">
+        <i class="iconfont icon-arrow-right-bold"></i>
+      </a>
+      <!-- 表示当前位置的圆点 -->
+      <div id="index"></div>
+    </div>
+  </div>
+  <!-- 内容主体区域 -->
+  <div class="content">
+    <!-- 左侧主体 -->
+    <div class="left">
+      <div class="navigation">
+        <h3>
+          <i class="iconfont icon-yuan"></i>
+          <span>热门推荐</span>
+        </h3>
+        <!-- 导航item项 -->
+        <a href="javascript:void(0)">华语</a>
+        <span class="line">|</span>
+        <a href="javascript:void(0)">流行</a>
+        <span class="line">|</span>
+        <a href="javascript:void(0)">摇滚</a>
+        <span class="line">|</span>
+        <a href="javascript:void(0)">民谣</a>
+        <span class="line">|</span>
+        <a href="javascript:void(0)">电子</a>
+        <!-- 更多 -->
+        <a href="javascript:void(0)">
+          <span>更多</span>
+          <i class="iconfont icon-xiangyou" onclick="javascript:void(0)"></i>
+        </a>
+      </div>
+      <!-- 推荐内容 4 * 2 -->
+      <div class="recommend">
+        <div>
+          <!-- 图片 -->
+          <img src="https://p1.music.126.net/smz83u5KdKPaDYggOaJV9Q==/109951166526033909.jpg?param=140y140">
+          <!-- 播放和数据 -->
+          <div>
+            <!-- 图标 -->
+            <i class="iconfont icon-bofangliang"></i>
+            <!-- 播放量 -->
+            <span>42万</span>
+            <!-- 播放按钮 -->
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <!-- 标题 -->
+          <a href="javascript:void(0)">你还不懂吗？他不会回来了...</a>
+        </div>
+        <div>
+          <img src="https://p1.music.126.net/xWzBB0WuyG56Nif9DR-igQ==/109951166577891529.jpg?param=140y140">
+          <div>
+            <i class="iconfont icon-bofangliang"></i>
+            <span>81592</span>
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <a href="javascript:void(0)">『给耳朵来套体操』/享受脑内炸裂的体验</a>
+        </div>
+        <div>
+          <img src="https://p1.music.126.net/Pn8dF6LPnb3m46hX5gdGSA==/109951166367921820.jpg?param=140y140">
+          <div>
+            <i class="iconfont icon-bofangliang"></i>
+            <span>54万</span>
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <a href="javascript:void(0)">深爱总迟解将爱却晚秋</a>
+        </div>
+        <div class="tag">
+          <img src="https://p1.music.126.net/VZeuLnrXF_0y-PwIt9sE_g==/109951166319745292.jpg?param=140y140">
+          <div>
+            <i class="iconfont icon-bofangliang"></i>
+            <span>469</span>
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <a href="javascript:void(0)">EP.23 梅根的来电，“你好，我是公爵夫人”</a>
+        </div>
+        <div>
+          <img src="https://p1.music.126.net/JKhJj8e-_PjL9ilHqdaPmQ==/109951166442699958.jpg?param=140y140">
+          <div>
+            <i class="iconfont icon-bofangliang"></i>
+            <span>305万</span>
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <a href="javascript:void(0)">[翻唱]好听的歌永远没有完整版</a>
+        </div>
+        <div class="tag">
+          <img src="https://p1.music.126.net/kFVZp01vd3TCWCWklx6jvQ==/109951166201232512.jpg?param=140y140">
+          <div>
+            <i class="iconfont icon-bofangliang"></i>
+            <span>3249</span>
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <a href="javascript:void(0)">董又霖：爱，教会我们很多事</a>
+        </div>
+        <div>
+          <img src="https://p1.music.126.net/lHjRKW5bkXO4ZXy5ShoDFA==/109951165517309896.jpg?param=140y140">
+          <div>
+            <i class="iconfont icon-bofangliang"></i>
+            <span>3642万</span>
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <a href="javascript:void(0)">“网易云那些评论10万+的歌”</a>
+        </div>
+        <div class="tag">
+          <img src="https://p1.music.126.net/aPbfQw4t9wv35gqdLPWlWg==/109951166529610290.jpg?param=140y140">
+          <div>
+            <i class="iconfont icon-bofangliang"></i>
+            <span>22万</span>
+            <i class="iconfont icon-bofang"></i>
+          </div>
+          <a href="javascript:void(0)">我承认都是月亮惹的祸</a>
+        </div>
+      </div>
+      <!-- 新碟上架 -->
+      <div class="navigation">
+        <h3>
+          <i class="iconfont icon-yuan"></i>
+          <span>新碟上架</span>
+        </h3>
+        <!-- 更多 -->
+        <a href="javascript:void(0)">
+          <span>更多</span>
+          <i class="iconfont icon-xiangyou" onclick="javascript:void(0)"></i>
+        </a>
+      </div>
+      <!-- 新碟上架内容区域 -->
+      <div class="list-x">
+        <!-- list容器 -->
+        <div class="list">
+          <!-- 翻页的item项 -->
+          <ul class="list-item">
+            <li>
+              <!-- 封面 -->
+              <div class="cover">
+                <img src="https://p4.music.126.net/CNn4NS8_qH_OQnQXd236IQ==/109951166616303692.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <!-- 名称和作者 -->
+              <div class="info">
+                <a href="javascript:void">一起向未来</a>
+                <a href="javascript:void">易烊千玺</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p3.music.126.net/UU1PbEAJgUd-NXw0DDEevw==/109951166611866092.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">Red (Taylor's Version)</a>
+                <a href="javascript:void">Taylor Swift</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p4.music.126.net/ZZS0fL88U_0D27k1Vhprig==/109951166605170201.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">An Evening With Silk Sonic</a>
+                <a href="javascript:void">Bruno Mars</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p4.music.126.net/yZSicO5kWXxnRmGGp27HdQ==/109951166540063062.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">E-SIDE</a>
+                <a href="javascript:void">YOASOBI</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p4.music.126.net/9MJoClH2G-VwLNOAe-5kQg==/109951166608198136.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">Bite Me</a>
+                <a href="javascript:void">Avril Lavigne</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="list-item">
+            <li>
+              <!-- 封面 -->
+              <div class="cover">
+                <img src="https://p3.music.126.net/0Nt48fegVYo7SYo1-wi8tQ==/109951166589063810.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <!-- 名称和作者 -->
+              <div class="info">
+                <a href="javascript:void">一起向未来</a>
+                <a href="javascript:void">易烊千玺</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p4.music.126.net/5jBz_uLtQhET09Y3W2Tm2Q==/109951166570035556.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">Red (Taylor's Version)</a>
+                <a href="javascript:void">Taylor Swift</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p3.music.126.net/OI5PaJ0yjh0LKn8-_drbkQ==/109951166566125678.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">An Evening With Silk Sonic</a>
+                <a href="javascript:void">Bruno Mars</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p4.music.126.net/kGSU7wbU2-Pd6kXr7ibrZQ==/109951166567793994.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">E-SIDE</a>
+                <a href="javascript:void">YOASOBI</a>
+              </div>
+            </li>
+            <li>
+              <div class="cover">
+                <img src="https://p3.music.126.net/MucTBTOiqshWcMIPdrLIRA==/109951166563905822.jpg?param=100y100">
+                <a href="javascript:void"><i class="iconfont icon-bofang"></i></a>
+              </div>
+              <div class="info">
+                <a href="javascript:void">Bite Me</a>
+                <a href="javascript:void">Avril Lavigne</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- 翻页按钮 -->
+        <a href="javascript:void(0)" hidefocus="true" onclick="setListItemLocation('last')">
+          <i class="iconfont icon-arrow-left-bold"></i>
+        </a>
+        <a href="javascript:void(0)" hidefocus="true" onclick="setListItemLocation('next')">
+          <i class="iconfont icon-arrow-right-bold"></i>
+        </a>
+      </div>
+      <!-- 榜单 -->
+      <div class="navigation">
+        <h3>
+          <i class="iconfont icon-yuan"></i>
+          <span>榜单</span>
+        </h3>
+        <!-- 更多 -->
+        <a href="javascript:void(0)">
+          <span>更多</span>
+          <i class="iconfont icon-xiangyou" onclick="javascript:void(0)"></i>
+        </a>
+      </div>
+      <!-- 榜单内容 -->
+      <div class="leaderboard">
+        <div class="leaderboard-item">
+          <!-- 头部 -->
+          <div>
+            <!-- 封面 -->
+            <a href="javascript:void(0)">
+              <img src="https://p3.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100">
+            </a>
+            <!-- 文字和图标 -->
+            <h3>飙升榜</h3>
+            <p>
+              <a href="javascript:void(0)"><i class="iconfont icon-bofang"></i></a>
+              <a href="javascript:void(0)"><i class="iconfont icon-shoucang"></i></a>
+            </p>
+          </div>
+          <!-- 榜单 -->
+          <p><a href="javascript:void(0)"><span>1</span> 一分一寸</a></p>
+          <p><a href="javascript:void(0)"><span>2</span> 暴雨</a></p>
+          <p><a href="javascript:void(0)"><span>3</span> Easy On Me</a></p>
+          <p><a href="javascript:void(0)"><span>4</span> 哭泣站台</a></p>
+          <p><a href="javascript:void(0)"><span>5</span> All Too Well (10 Minute Version)</a></p>
+          <p><a href="javascript:void(0)"><span>6</span> 漠河舞厅·2022</a></p>
+          <p><a href="javascript:void(0)"><span>7</span> 靠近</a></p>
+          <p><a href="javascript:void(0)"><span>8</span> 无数次被你解救的生活</a></p>
+          <p><a href="javascript:void(0)"><span>9</span> 山脚</a></p>
+          <p><a href="javascript:void(0)"><span>10</span> B级鲨鱼</a></p>
+          <!-- 查看全部 -->
+          <a href="javascript:void(0)">查看全部></a>
+        </div>
+        <div class="leaderboard-item">
+          <div>
+            <a href="javascript:void(0)">
+              <img src="https://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100">
+            </a>
+            <h3>新歌榜</h3>
+            <p>
+              <a href="javascript:void(0)"><i class="iconfont icon-bofang"></i></a>
+              <a href="javascript:void(0)"><i class="iconfont icon-shoucang"></i></a>
+            </p>
+          </div>
+          <p><a href="javascript:void(0)"><span>1</span> 删了吧</a></p>
+          <p><a href="javascript:void(0)"><span>2</span> 漠河舞厅·2022</a></p>
+          <p><a href="javascript:void(0)"><span>3</span> 浪漫主义</a></p>
+          <p><a href="javascript:void(0)"><span>4</span> 指纹</a></p>
+          <p><a href="javascript:void(0)"><span>5</span> 路过人间</a></p>
+          <p><a href="javascript:void(0)"><span>6</span> 一分一寸·2022</a></p>
+          <p><a href="javascript:void(0)"><span>7</span> 南半球与北海道</a></p>
+          <p><a href="javascript:void(0)"><span>8</span> 没你也能活下去</a></p>
+          <p><a href="javascript:void(0)"><span>9</span> 山脚</a></p>
+          <p><a href="javascript:void(0)"><span>10</span> Boring Day</a></p>
+          <a href="javascript:void(0)">查看全部></a>
+        </div>
+        <div class="leaderboard-item">
+          <div>
+            <a href="javascript:void(0)">
+              <img src="https://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100">
+            </a>
+            <h3>原创榜</h3>
+            <p>
+              <a href="javascript:void(0)"><i class="iconfont icon-bofang"></i></a>
+              <a href="javascript:void(0)"><i class="iconfont icon-shoucang"></i></a>
+            </p>
+          </div>
+          <p><a href="javascript:void(0)"><span>1</span> 一则废话</a></p>
+          <p><a href="javascript:void(0)"><span>2</span> 不会大声说话</a></p>
+          <p><a href="javascript:void(0)"><span>3</span> 信号失灵</a></p>
+          <p><a href="javascript:void(0)"><span>4</span> Another Time</a></p>
+          <p><a href="javascript:void(0)"><span>5</span> 暴雨中</a></p>
+          <p><a href="javascript:void(0)"><span>6</span> 小丑马戏</a></p>
+          <p><a href="javascript:void(0)"><span>7</span> 异地恋</a></p>
+          <p><a href="javascript:void(0)"><span>8</span> 入冬</a></p>
+          <p><a href="javascript:void(0)"><span>9</span> 知寒</a></p>
+          <p><a href="javascript:void(0)"><span>10</span> STAY</a></p>
+          <a href="javascript:void(0)">查看全部></a>
+        </div>
+      </div>
+    </div>
+    <!-- 右侧边栏 -->
+    <div class="right">
+      <!-- 登录框 -->
+      <div class="login">
+        <p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+        <a href="javascript:void()">
+          <span>用户登录</span>
+        </a>
+      </div>
+      <!-- 入驻歌手 -->
+      <div class="title">
+        <h5>入驻歌手</h5>
+        <a href="javascript:void(0)">查看全部 ></a>
+      </div>
+      <!-- 歌手列表 -->
+      <div class="singerList">
+        <div>
+          <a href="javascript:void(0)">
+            <img src="https://p1.music.126.net/rCsLFXha6SLis0tV7yZ5fA==/109951165588539704.jpg?param=62y62">
+            <div>
+              <h6>张惠妹aMEI</h6>
+              <p>台湾歌手张惠妹</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="javascript:void(0)">
+            <img src="https://p1.music.126.net/wDxCsT3YEYdNg-UZU_ZKeg==/109951166047225823.jpg?param=62y62">
+            <div>
+              <h6>Fine乐团</h6>
+              <p>独立音乐人</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="javascript:void(0)">
+            <img src="https://p1.music.126.net/TiRAIiIihOgtBgYB6DZRXA==/109951162916034289.jpg?param=62y62">
+            <div>
+              <h6>萬曉利</h6>
+              <p>独立音乐人</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="javascript:void(0)">
+            <img src="https://p1.music.126.net/w_UWOls2uCkFN_U62788Xg==/18806046882229308.jpg?param=62y62">
+            <div>
+              <h6>音乐人赵雷</h6>
+              <p>密钥歌手、中国现...</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="javascript:void(0)">
+            <img src="https://p1.music.126.net/mS2PtUF2F_x949tJHS5Kog==/109951166457235020.jpg?param=62y62">
+            <div>
+              <h6>王三博</h6>
+              <p>音乐人</p>
+            </div>
+          </a>
+        </div>
+        <!-- 按钮 -->
+        <a href="javascript:void(0)">
+          <span>申请成为网易音乐人</span>
+        </a>
+      </div>
+      <!-- 热门主播 -->
+      <div class="title">
+        <h5>热门主播</h5>
+      </div>
+      <!-- 主播列表 -->
+      <div class="anchorList">
+        <div>
+          <img src="https://p1.music.126.net/H3QxWdf0eUiwmhJvA4vrMQ==/1407374893913311.jpg?param=40y40">
+          <div>
+            <a href="javascript:void(0)">
+              <span>陈立</span>
+            </a>
+            <p>心理学家、美食家陈立教授</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://p1.music.126.net/GgXkjCzeH4rqPCsrkBV1kg==/109951164843970584.jpg?param=40y40">
+          <div>
+            <a href="javascript:void(0)">
+              <span>刘维-Julius</span>
+            </a>
+            <p>歌手、播客节目《维维道来》主理人</p>
+          </div>
+        </div>
+        <div>
+          <img src="	https://p1.music.126.net/C8jFbOTjUOnTKEHX6uuzOg==/109951166239584597.jpg?param=40y40">
+          <div>
+            <a href="javascript:void(0)">
+              <span>莫非定律MoreFeel</span>
+            </a>
+            <p>男女双人全创作独立乐团</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://p1.music.126.net/NHjNoFpLDEZ-3OR9h35z1w==/109951165825466770.jpg?param=40y40">
+          <div>
+            <a href="javascript:void(0)">
+              <span>碎嘴许美达</span>
+            </a>
+            <p>脱口秀网络红人</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://p1.music.126.net/CpUdHPNvBvN7kebvL21TTA==/109951163676573083.jpg?param=40y40">
+          <div>
+            <a href="javascript:void(0)">
+              <span>银临Rachel</span>
+            </a>
+            <p>古风音乐人</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div class="bottom">
+    <!-- 网站版权等信息 -->
+    <div class="info">
+      <div class="left">
+        <!-- 友链 -->
+        <div class="link">
+          <a href="javascript:void(0)">
+            <span>服务条款</span>
+          </a>
+          <span class="line">|</span>
+          <a href="javascript:void(0)">
+            <span>隐私政策</span>
+          </a>
+          <span class="line">|</span>
+          <a href="javascript:void(0)">
+            <span>儿童隐私政策</span>
+          </a>
+          <span class="line">|</span>
+          <a href="javascript:void(0)">
+            <span>版权投诉指引</span>
+          </a>
+          <span class="line">|</span>
+          <a href="javascript:void(0)">
+            <span>意见反馈</span>
+          </a>
+          <span class="line">|</span>
+          <a href="javascript:void(0)">
+            <span>广告合作</span>
+          </a>
+        </div>
+        <!-- 版权和备案 -->
+        <div class="record">
+          <p>
+            <span>网易公司版权所有©1997-2021</span>
+            <span>杭州乐读科技有限公司运营：<a href="javascript:void(0)">浙网文[2021] 1186-054号</a></span>
+          </p>
+          <p>
+            <span>违法和不良信息举报电话：0571-89853516</span>
+            <span>举报邮箱：<a href="javascript:void(0)">ncm5990@163.com</a></span>
+          </p>
+          <p>
+            <span><a href="javascript:void(0)">粤B2-20090191-18 工业和信息化部备案管理系统网站</a></span>
+            <span>
+              <img src="https://s2.music.126.net/style/web2/img/3rd/police.png?e5bbc0d7061196bf01ceafd2478ed42a">
+              <a href="javascript:void(0)">浙公网安备 33010902002564号</a>
+            </span>
+          </p>
+        </div>
+      </div>
+      <!-- 右侧 -->
+      <div class="right">
+        <ul>
+          <li>
+            <a href="javascript:void(0)"></a>
+            <span>Amped Studio</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)"></a>
+            <span>用户认证</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)"></a>
+            <span>独立音乐人</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)"></a>
+            <span>赞赏</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)"></a>
+            <span>视频奖励</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 音乐播放工具栏 -->
+  <div class="music-panel">
+    <div class="bg-left"></div>
+    <div class="bg-right">
+      <div class="left">
+        <a href="javascript:void(0)" id="switch" onclick="switchMusicPanel()"></a>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="widget">
+      <!-- 播放暂停等.. -->
+      <div>
+        <a href="javascript:void(0)" title="上一首"></a>
+        <a href="javascript:void(0)" title="播放和暂停"></a>
+        <a href="javascript:void(0)" title="下一首"></a>
+      </div>
+      <!-- 头像和进度条等.. -->
+      <div>
+        <img src="https://p3.music.126.net/44nGILdOAridXyCEQBYXcQ==/109951165319524266.jpg?param=34y34">
+        <p>
+          <span>爱如潮水</span>
+          <span>池鱼</span>
+          <span></span>
+        </p>
+        <div>
+          <p><span></span></p>
+          <p><span>00:00</span><span>/</span><span>00:00</span></p>
+        </div>
+      </div>
+      <!-- 收藏分享等.. -->
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- 声音等 -->
+      <div>
+        <span></span>
+        <span></span>
+        <span>13</span>
+      </div>
+    </div>
+  </div>
+  <!-- 引入JS -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

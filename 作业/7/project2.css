@@ -1,0 +1,32 @@
+.content{
+    width: 720px;
+    height: 600px;
+    border: 1px solid #0099ff;
+    margin: 0 100px;
+    text-align: center;
+}
+
+#a{
+    text-align: center;
+    margin: 10px 10px;
+    border: 1px double #9999cc;
+    float: left;
+    width: 208px;
+    height: 225px;
+}
+
+h3{
+    text-align: center;
+    font-size: 32px;
+    color: red;
+}
+
+img{
+    width: 186px;
+    height: 205px;
+    border: 10px groove #9999cc;
+}
+
+div a:hover img{
+    border: 10px dashed #9999cc;
+}

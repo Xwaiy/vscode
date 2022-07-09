@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+
+    <style>
+        body {
+            background-color:gray;
+        }
+
+        a {
+            /* 去除下划线 */
+            text-decoration: none;
+        }
+
+        /* 设置容器样式 */
+        .news-wrapper {
+            /* 设置宽高 */
+            width: 239px;
+            height: 358px;
+            /* 添加背景颜色 */
+            background-color: #fff;
+            /* 设置居中 */
+            margin: 50px auto;
+            /* 设置上边框 */
+            border-top: 1px solid #ddd;
+        }
+
+        /* 设置news-title */
+        .news-title {
+            font-size: 20px;
+            /* 设置 */
+            display: inline-block;
+            /* 设置高度 */
+            height: 30px;
+            /* 设置上边框 */
+            border-top: 1px red solid;
+            /* 将h2上移 */
+            margin: -1px;
+            padding: 10px;
+        }
+
+        .news-title a {
+            color: black;
+            /* 设置文字加粗 */
+            font-weight: bold;
+            margin-left: -8px;
+        }
+
+        .news-img{
+            height: 150px;
+        }
+        .news-img .img-title {
+            /* 设置字体颜色 */
+            color: #fff;
+            /* 设置字体加粗 */
+            font-weight: bold;
+            /* 设置字体上移 */
+            margin-top: -33px;
+            padding-left: 18px;
+            font-size: 16px;
+        }
+        .news-img .img-title a{
+            color: #fff;
+        }
+        .news-list {
+            padding-left: 18px;
+            margin-top: 50px;
+            color: rgb(206, 206, 206);
+        }
+
+        .news-list li{
+            margin-bottom: 7px;
+        }
+
+        .news-list li a{
+            font-size: 14px;
+            color: #666;
+        }
+
+        .news-list li a:hover{
+            color: red;
+        }
+        
+        .news-title a:hover{
+            color: red;
+        }
+        .img-title a:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="news-wrapper">
+        <!-- 创建标题 -->
+        <h2 class="news-title">
+            <a href="#">体育</a>
+        </h2>
+        <!-- 创建图片标签 -->
+        <div class="news-img">
+            <a href="https://www.jd.com">
+                <img src="/Practice/练习图片/2.png" alt="Xwaiy">
+            </a>
+            <!-- 图片标题 -->
+                <h3 class="img-title">
+                    <a href="https://baidu.com">我是Xwaiy，喜欢滑板、街舞</a>
+                </h3>
+        </div>
+
+        <!--新闻列表 -->
+        <ul class="news-list">
+            <li>
+                <a href="https://www.jd.com">我是Xwaiy，喜欢滑板、街舞</a>
+            </li>
+            <li>
+                <a href="#">我是Xwaiy，喜欢滑板、街舞</a>
+            </li>
+            <li>
+                <a href="#">我是Xwaiy，喜欢滑板、街舞</a>
+            </li>
+            <li>
+                <a href="#">我是Xwaiy，喜欢滑板、街舞</a>
+            </li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

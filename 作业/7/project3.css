@@ -1,0 +1,44 @@
+#b{
+    width: 160px;
+    height: 150px;
+    border: 1px solid #e0e0e0;
+    float: left;
+    margin: 5px;
+}
+
+#a{
+    width: 900px;
+    height: 150px;
+    border: 1px solid #f0f0f0;
+    float: left;
+}
+
+li{
+    list-style: none;
+    line-height: 1.5em;
+}
+.span1{
+    background-color: #ff0033;
+    color:#fff;
+    width: 10px;
+    height: 10px;
+}
+.span2{
+    font-size: 16px;
+    font-family: 黑体;
+    font-weight: bolder;
+}
+.span3{
+    font-size: 16px;
+    font-family: 黑体;
+    font-weight: bolder;
+    color: #ff0033;
+}
+.span4{
+    color: #c0c0c0;
+    font-weight: bolder;
+    text-indent: 2em;
+    font-family: 黑体;
+    font-size: 16px;
+    text-decoration: line-through;
+}

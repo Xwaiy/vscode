@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>个人主页</title>
+
+	<style>
+		/* 动画Xwaiy */
+		style {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Bad Script', cursive;
+		}
+
+		body {
+			display: flex;
+			min-height: 90vh;
+			background: white;
+		}
+
+		h2 {
+			display: flex;
+			color: transparent;
+			font-size: 7vw;
+		}
+
+		h2 span {
+			animation: animate 3s linear infinite;
+			animation-delay: calc(0.1s * var(--i));
+		}
+
+		@keyframes animate {
+			0% {
+				color: #fff;
+				filter: blur(2px) hue-rotate(0deg);
+				text-shadow: 0 0 10px #00b3ff,
+					0 0 20px #00b3ff,
+					0 0 40px #00b3ff,
+					0 0 80px #00b3ff,
+					0 0 120px #00b3ff,
+					0 0 200px #00b3ff,
+					0 0 300px #00b3ff,
+					0 0 400px #00b3ff;
+			}
+
+			30%,
+			70% {
+				color: #fff;
+				filter: blur(2px) hue-rotate(360deg);
+				text-shadow: 0 0 10px #00b3ff,
+					0 0 20px #00b3ff,
+					0 0 40px #00b3ff,
+					0 0 80px #00b3ff,
+					0 0 120px #00b3ff,
+					0 0 200px #00b3ff;
+			}
+
+			100% {
+				color: transparent;
+				box-shadow: none;
+				filter: blur(2px) hue-rotate(0deg);
+			}
+		}
+
+		/* 动画end */
+
+		/* 主页 */
+		.app {
+			margin: 80px 60px;
+			/* 设置阴影 */
+			box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+		}
+
+		.h-back {
+			width: 750px;
+			height: 340px;
+			background-image: url("./资源/xwaiy-06.jpg");
+
+		}
+
+		hr {
+			margin: 0px;
+		}
+
+		.h-back .icon {
+			width: 100px;
+			height: 100px;
+			border: 2px solid hsla(0, 0%, 100%, .4);
+			border-radius: 50%;
+			margin-top: 220px;
+			margin-left: 30px;
+		}
+
+		.h-back .name {
+			margin-right: 560px;
+			margin-top: 270px;
+			float: right;
+			color: white;
+		}
+
+		.name:hover {
+			color: #242323;
+		}
+
+		/* 导航栏 */
+		.nav li {
+			list-style: none;
+		}
+
+		.nav {
+			position: relative;
+			display: flex;
+			margin-left: -40px;
+			margin-top: 0;
+		}
+
+		/* 将三个li宽度平分，高度60px */
+		li {
+			flex: 1;
+			height: 400px;
+		}
+
+		/* input隐藏 */
+		input {
+			display: none;
+		}
+
+		/* 设置input的下一个节点label的样式 */
+		input+label {
+			display: block;
+			width: 100%;
+			font-size: 20px;
+			text-align: center;
+		}
+
+		/* 设置div内容的基础样式 隐藏内容div*/
+		input+label+div {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 60px;
+		}
+
+		/* input选中状态时候对应的label的样式 */
+		input:checked+label {
+			background: #333333;
+			color: #fff;
+		}
+
+		/* input选中时候显示对应的div */
+		input:checked+label+div {
+			display: block;
+		}
+
+		.nav div {
+			margin-left: 50px;
+			margin-top: -10px;
+		}
+
+		ul label:hover {
+			background-color: #3f3f3f;
+			color: #E8E7E3;
+		}
+
+		.banner {
+			overflow: hidden;
+		}
+
+		.nav a {
+			text-decoration: none;
+		}
+
+		#hobby a {
+			margin: auto 20px;
+		}
+		#photo img{
+			border-color:  #aaa #bbb #ccc #ddd;
+			border-width: 10px;
+			border-style: solid;
+			color: inherit;
+			box-shadow: 0 0 5px rgba(0, 0, 0, .7);
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- 动画 -->
+	<div>
+		<h2>
+			<span style="--i:1">X</span>
+			<span style="--i:2">w</span>
+			<span style="--i:3">a</span>
+			<span style="--i:4">i</span>
+			<span style="--i:5">y</span>
+		</h2>
+	</div>
+	<!-- 动画end -->
+	<div class="app">
+		<!-- 顶部 -->
+		<div class="head">
+			<!-- 顶部背景 -->
+			<div class="h-back">
+				<!-- 头像 -->
+				<img class="icon" src="./资源/Xwaiy.jpg">
+				<!-- 姓名 -->
+				<span class="name">Xwaiy</span>
+
+			</div>
+		</div>
+		<!-- 顶部end -->
+
+		<!-- 导航栏 -->
+		<div class="banner">
+			<ul class="nav">
+				<!-- 个人信息 -->
+				<li>
+					<input type="radio" name="check" id="active1" checked>
+					<label for="active1">个人信息</label>
+					<div>
+						大家好，我是Xwaiy，就读于广州城市理工学院计算机科学与技术专业。<br>
+						喜欢运用代码实现各种小玩意，比如左上角的那个小背景。为了能够熟练运用CSS，我写了很多不入流的代码。可以在导航栏的
+						<a href="https://github.com/Xwaiy/projects.git">GitHub</a>
+						中查看（一部分）。
+					</div>
+				</li><!-- 个人信息 end-->
+				<!-- 爱好 -->
+				<li>
+					<input type="radio" name="check" id="active2">
+					<label for="active2">爱好</label>
+					<div id="hobby">
+						<a href="https://www.bilibili.com/video/BV1rB4y1u77c?share_source=copy_web">篮球</a>
+						<a href="https://www.bilibili.com/video/BV1y64y1r7ur?share_source=copy_web">滑板</a>
+						<a href="https://www.bilibili.com/video/BV1pr4y1v7Vw?share_source=copy_web">Hiphop</a>
+					</div>
+				</li><!-- 爱好end -->
+				<!-- 视频 -->
+				<li>
+					<input type="radio" name="check" id="active3">
+					<label for="active3">视频</label>
+					<div>
+						<embed src="./资源/I_R_E_A_M - JK-Datsright.mp3">
+						<embed src="./资源/I_R_E_A_M - Enrythm-the realest(diablo vs batalla).mp3">
+						<embed src="./资源/滑板.mp4" width="606px">
+						<embed src="" >
+					</div>
+				</li><!-- 视频end -->
+				<!-- 相册 -->
+				<li>
+					<input type="radio" name="check" id="active4">
+					<label for="active4">相册</label>
+					<div id="photo">
+						<img src="./资源/Xwaiy.jpg" width="120px" height="120px">
+						<img src="./资源/xwaiy-06.jpg" width="120px" height="120px">
+						<img src="./资源/img_proxy.gif" width="120px" height="120px">
+						<img src="./资源/钱.gif" width="120px" height="120px">
+						<img src="./资源/蜘蛛侠.jpg" width="120px" height="120px">
+					</div>
+				</li><!-- 相册end -->
+				<!-- GitHub -->
+				<li>
+					<input type="radio" name="check" id="active5">
+					<label for="active5">
+						<a href="https://github.com/Xwaiy/projects.git">GitHub</a>
+					</label>
+				</li><!-- GitHub end -->
+				<!-- 其他 -->
+				<li>
+					<input type="radio" name="check" id="active6">
+					<label for="active6">其他</label>
+					<div>
+						没有其他
+					</div>
+				</li><!-- 其他end -->
+			</ul>
+		</div>
+
+		<!-- 尾部 -->
+		<hr size="1px" color="red">
+		<p align="center">版权所有&copy;  Xwaiy</p>
+		<!-- 尾部end -->
+	</div>
+
+</body>
+
+</html>
